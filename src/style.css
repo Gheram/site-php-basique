@@ -1,0 +1,180 @@
+@font-face {
+	src: url("clean_police.ttf");
+	font-family: clean;
+}
+
+@font-face {
+	src: url("Amigos.ttf");
+	font-family: amigos;
+}
+
+@font-face {
+	src: url("written_police.ttf");
+	font-family: written;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-image: url("https://images.pexels.com/photos/917371/pexels-photo-917371.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 65%;
+}
+
+.all {
+	margin: 0px;
+	padding: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 900px;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.bandeau {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.bandeau h1 {
+	text-align: center;
+	font-family: amigos;
+	font-size: 50px;
+	letter-spacing: 10px;
+	font-weight: normal;
+}
+
+.line_cat {
+	background-color: rgba(52, 152, 219, 0.5);
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 20px;
+	font-family: amigos;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.footer {
+	opacity: 0.5;
+	border-top: thin solid black;
+	padding: 30px;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	padding: 10px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.box:hover {
+	transform: scale(1.2);
+	box-shadow: 0px 0px 20px;
+	transition: 0.5s;
+	z-index: 999;
+}
+
+.box .prix {
+	margin-top: 80px;
+	width: 100%;
+	border: none;
+	background: linear-gradient(to right,rgba(0,0,0,0), rgba(255,0,0,0.5), rgba(255,0,0,0.5), rgba(255,0,0,0.5));
+	color: white;
+	text-align: right;
+	padding: 5px;
+}
+
+.search input, .connect input {
+	margin: auto;
+	display: block;
+	width: 80%;
+	border-radius: 10px;
+	border: none;
+	padding: 5px;
+	margin-top: 20px;
+	font-size: 20px;
+}
+
+.menu a {
+	padding: 10px;
+	text-decoration: none;
+	color: black;
+	background-color: rgba(52, 152, 219, 0.4);
+	transition: 0.2s;
+}
+
+.menu a:hover {
+	transition: 0.2s;
+	box-shadow: 0px 0px 1px;
+	background-color: rgba(52, 152, 219, 0.9);
+}
+
+div.presentation {
+	background-color: white;
+}
+
+div.presentation p {
+	text-indent: 30px;
+	display: inline-block;
+	padding: 20px;
+}
+
+div.presentation h3 {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+div.presentation img {
+	width: 100%;
+	display: inline-block;
+}
+
+.presentation .prix {
+	background-color: rgba(0,0,0,0.1);
+	text-align: right;
+}
+
+.presentation .option {
+	padding: 20px;
+	display: inline-block;
+}
+
+.presentation .option a {
+	padding: 10px;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 3px;
+	margin: 20px;
+	color: black;
+	text-decoration: none;
+}
+
+.confirm {
+	padding: 10px;
+	border-radius: 5px;
+	background-color: rgba(111, 195, 224, 0.9);
+	display: inline-flex;
+	color: black;
+	text-decoration: none;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+.recap {
+	background-color: white;
+	display: block;
+	margin: auto;
+	width: max-content;
+}
+
+.recap td {
+	border: thin solid black;
+	padding: 10px;
+}

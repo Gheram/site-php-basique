@@ -1,0 +1,81 @@
+body {
+	background-color: black;
+	color: white;
+}
+
+input, textarea {
+	margin: auto;
+	display: block;
+	width: 80%;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
+h2.title {
+	color: white;
+	text-align: center;
+}
+
+.menu {
+	width: 100%;
+	padding: 5px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.menu .box {
+	padding: 10px;
+	min-width: 100px;
+	display: inline-block;
+	background-color: rgba(200,200,200,1);
+	text-align: center;
+	color: black;
+}
+
+.menu .box .link {
+	display: none;
+}
+
+.menu .box .link a {
+	text-decoration: none;
+	color: black;
+}
+
+.menu .box:hover .link {
+	display: block;
+	width: 120px;
+	position: absolute;
+	background-color: rgba(200,200,200,1);
+	margin-left: -10px;
+}
+
+.menu .box:hover .link a {
+	display: block;
+
+	padding: 10px;
+}
+
+.menu .box:hover .link a:hover {
+	background-color: rgba(220,220,220,1);
+}
+
+a.nada {
+	color: black;
+	text-decoration: none;
+}
+
+.content {
+	margin: auto;
+	margin-top: 100px;
+	width: 90%;
+}
+
+table.list {
+	width: 90%;
+	margin: auto;
+}
+
+table.list td {
+	border: thin solid white;
+}

@@ -1,0 +1,43 @@
+<fieldset>
+<legend>Commandes</legend>
+<?php
+
+	$list = glob("../db/commandes/*.cmd");
+	for ($b = 0; isset($list[$b]); $b++)
+	{
+		$list[$b] = unserialize(file_get_contents($list[$b]));
+		$user = unserialize(file_get_contents("../db/users/".$list[$b]['client'].".user"));
+?>
+<hr>
+<h5>commande du <?= $list[$b]['date'] ?> au <?= $list[$b]['livraison'] ?></h5>
+<h2>Pour <?= $user['nom'] ?> <?= $user['prenom'] ?></h2>
+<table class="recap" style="display: inline-block;">
+	<tr><td>Nom de ou des articles</td><td>Prix</td></tr>
+<?php
+$panier = $list[$b]['products'];
+$total = 0;
+for ($a = 0; isset(array_keys($panier)[$a]); $a++)
+{
+	$data = unserialize(file_get_contents("../db/articles/".array_keys($panier)[$a].".article"));
+?>
+<tr><td><?= $data['nom'] ?></td><td><?= $data['prix'] ?></td></tr>
+<?php
+	$total += $data['prix'];
+}
+?>
+<tr><td><b>Total TTC</b></td><td><?= $total ?>&euro;</td></tr>
+</table>
+<h2>Livraison pr&eacute;vue : <?= $list[$b]['livraison_date'] ?></h2>
+<?php
+	}
+
+	if (count($list) == 0)
+	{
+		?>
+		<h2 style="text-align: center;">Il semblerait que vous n'ayez aucune livraison de pr&eacute;vue ! Qu'attendez vous ?</h2>
+		<?php
+
+	}
+
+?>
+</fieldset>
